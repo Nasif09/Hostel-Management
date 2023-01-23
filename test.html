@@ -1,0 +1,211 @@
+<html lang="en">
+
+<head>
+    <title>CSS Example</title>
+</head>
+
+<body>
+
+    <h1>This is Head 1</h1>
+    <h1>This is Head 2</h1>
+    <h1 onclick="test()">This is Head 3</h1>
+
+    <input type="text" name="name" id="name" onkeyup="f1()" />
+
+    <input type="button" name="btn" value="Click" onclick="f1()" />
+    <script>
+        //name = "alamin";
+        //var name = "xyz";
+        let name = "xyz";
+        let student = ['1', 'abc', 4];
+
+        //console.log("test...");
+        //document.write('<h1>This is test line from JS...</h1>');
+        //alert('test JS...');
+        function test() {
+            document.getElementsByTagName('h1')[0].innerHTML = "test";
+        }
+
+        function f1() {
+
+            let name = document.getElementById('name').value;
+            if (name.length < 8) {
+                document.getElementsByTagName('h1')[0].innerHTML = "Weak password";
+            } else {
+                document.getElementsByTagName('h1')[0].innerHTML = "Strong password";
+            }
+        }
+
+        //head_1.innerHTML = "Test";
+    </script>
+</body>
+
+</html>
+
+<html lang="en">
+
+<head>
+    <title>REGISTRATION</title>
+</head>
+
+<body>
+
+    <h1>Check</h1>
+    <table>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>REGISTRATION</legend>
+                    <form method="post" action="registrationValidator.php">
+                        <table>
+                            <tr>
+                                <td colspan="2"><br></td>
+                            </tr>
+                            <tr>
+                                <td>Name</td>
+                                <td>
+                                    :<input onkeyup="f1()" type="text" name="name" value="" id="na1" />
+                                    <p id="na1err"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>
+                                    :<input onkeyup="f1()" type="text" name="email" value="" id="em1" />
+                                    <p id="em1err"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Phone Number</td>
+                                <td>
+                                    :<input onkeyup="f1()" type="number" name="phone" value="" id="phn1" />
+                                    <p id="phn1err"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Userame</td>
+                                <td>
+                                    :<input onkeyup="f1()" type="text" name="username" value="" id="uid1" />
+                                    <p id="uid1err"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Password</td>
+                                <td>
+                                    :<input onkeyup="f1()" type="password" name="pass" value="" id="pass1" />
+                                    <p id="1passerr"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Confirm Password</td>
+                                <td>
+                                    :<input onkeyup="f1()" type="password" name="conpass" value="" id="con1" />
+                                    <p id="con1err"></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <fieldset>
+                                        <legend>Gender</legend>
+                                        <input type="radio" name="gender" value="Male" />Male
+                                        <input type="radio" name="gender" value="Female" />Female
+                                        <input type="radio" name="gender" value="Other" />Other
+                                        <p id="g1err"></p>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <fieldset>
+                                        <legend>Date of Birth</legend>
+                                        <input type="date" name="dob" value="" id="dob1" />
+                                        <p id="dob1err"></p>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="submit" name="" value="Submit" onclick="f1()" />
+                                    <input type="reset" name="" value="Reset" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </fieldset>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function f1() {
+            let name = document.getElementById('na1').value;
+            let email = document.getElementById('em1').value;
+            let phone = document.getElementById('ph1').value;
+            let username = document.getElementById('uid1').value;
+            let pass = document.getElementById('pass1').value;
+            let conpass = document.getElementById('con1').value;
+            if (name.length < 2) {
+                document.getElementsByTagName('h1')[0].innerHTML = "Invalid name";
+            }
+            if (email.length < 12) {
+                document.getElementsByTagName('p')[1].innerHTML = "Invalid email";
+            }
+            if (phone.length < 11) {
+                document.getElementsByTagName('p')[2].innerHTML = "Invalid Phone number";
+            }
+            if (username.length < 2) {
+                document.getElementsByTagName('p')[3].innerHTML = "Invalid username";
+            }
+            if (pass.length < 8) {
+                document.getElementsByTagName('p')[4].innerHTML = "weak password";
+            }
+            if (conpass != pass) {
+                document.getElementsByTagName('p')[5].innerHTML = "Password didn't match";
+            }
+        }
+
+        //head_1.innerHTML = "Test";
+    </script>
+</body>
+
+</html>

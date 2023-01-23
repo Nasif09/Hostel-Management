@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    padding: 12px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.nav {
+    background-color: rgb(109, 110, 109);
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    background-color: #004ea2;
+    display: block;
+}
+
+.nav img {
+    width: 100px;
+}
+
+.nav-links {
+    flex: 100;
+    text-align: right;
+    float: right;
+    padding: 22px;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: rgb(17, 16, 16);
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover:after {
+    width: 100%;
+}
+
+.background {
+    background-color: rgb(220, 245, 228);
+}
+
+.table td {
+    background-color: #6aa8ea;
+    margin-left: 10px;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    border-radius: 40px;
+}
+
+.cformate {
+    background-color: rgb(185, 203, 229);
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(2, 6, 3);
+    border: 1px solid rgb(14, 144, 68);
+    padding: 12px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+}
+
+.btn:hover {
+    border: 1px solid #eadfde;
+    background: #d33118;
+}
+
+.background {
+    background-color: rgb(248, 234, 234);
+}
+
+.opts {
+    background-color: rgb(173, 243, 220);
+}
+
+/* side nav */
+.select {
+    position: relative;
+    display: flex;
+    line-height: 0;
+}
+
+.cformate {
+    width: 30ex;
+    height: 2em;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+/* .fcount {
+    background-color: rgb(228, 89, 14);
+    border-radius: 10px;
+} */
